@@ -34,11 +34,12 @@ Constraints:
 POS_CASES = ["()", "()[]{}"]
 NEGATIVE_CASES = ["(]"]
 
-class Solution():
+
+class Solution:
     def isValid(self, s: str) -> bool:
         openings = {"(", "[", "{"}
         pairings = {"}": "{", ")": "(", "]": "["}
-        stack =[]
+        stack = []
 
         for c in s:
             if c in openings:

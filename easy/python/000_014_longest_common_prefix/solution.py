@@ -11,4 +11,3 @@ class Solution:
 
         # Case where they pass us nothing
         return longest_common
-
