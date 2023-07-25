@@ -30,13 +30,14 @@ for (int i = 0; i < actualLength; i++) {
 
 If all assertions pass, then your solution will be accepted.
 """
-examples = [([3,2,2,3], 3, 2), ([0,1,2,2,3,0,4,2], 2, 5)]
+examples = [([3, 2, 2, 3], 3, 2), ([0, 1, 2, 2, 3, 0, 4, 2], 2, 5)]
+
 
 class Solution:
     def removeElement(self, nums: list[int], val: int) -> int:
         good = 0
 
-        for i in range(len(nums)-1, -1, -1):
+        for i in range(len(nums) - 1, -1, -1):
             if nums[i] == val:
                 del nums[i]
             else:
@@ -44,13 +45,12 @@ class Solution:
 
         return good
 
-
     def test_examples(self):
         for e in examples:
             assert self.removeElement(e[0], e[1]) == e[2]
+
 
 if __name__ == "__main__":
     Solution().test_examples()
 
 # Runtime 47 ms Beats 56.81% || Memory 16.4 MB Beats 20.53%
-
